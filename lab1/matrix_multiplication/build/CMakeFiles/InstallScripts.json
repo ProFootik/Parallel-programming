@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Repositories/Parallel-programming/lab1/matrix_multiplication/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

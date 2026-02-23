@@ -89,32 +89,26 @@ Matrix MatrixUtils::multiplyMatrices(const Matrix& A, const Matrix& B) {
 }
 
 Matrix MatrixUtils::multiplyMatricesParallel(const Matrix& A, const Matrix& B) {
-    size_t n = A.size();
+    size_t n = A.size();  // это оставьте как size_t для размера
     Matrix C(n, std::vector<double>(n, 0.0));
     
 #ifdef _OPENMP
-    // Параллельное умножение с оптимизацией
-    #pragma omp parallel
-    {
-        // Используем динамическое распределение итераций для лучшей балансировки
-        #pragma omp for collapse(2) schedule(dynamic)
-        for (size_t i = 0; i < n; ++i) {
-            for (size_t j = 0; j < n; ++j) {
-                double sum = 0.0;
-                for (size_t k = 0; k < n; ++k) {
-                    sum += A[i][k] * B[k][j];
-                }
-                C[i][j] = sum;
+    // Используем тип со знаком для переменных цикла
+    #pragma omp parallel for collapse(2) schedule(dynamic)
+    for (long long i = 0; i < static_cast<long long>(n); ++i) {
+        for (long long j = 0; j < static_cast<long long>(n); ++j) {
+            double sum = 0.0;
+            for (long long k = 0; k < static_cast<long long>(n); ++k) {
+                sum += A[i][k] * B[k][j];
             }
+            C[i][j] = sum;
         }
     }
 #else
     C = multiplyMatrices(A, B);
 #endif
-    
     return C;
 }
-
 bool MatrixUtils::compareMatrices(const Matrix& C1, const Matrix& C2, double tolerance, double& max_diff) {
     size_t n = C1.size();
     if (n != C2.size()) return false;

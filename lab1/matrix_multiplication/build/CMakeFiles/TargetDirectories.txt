@@ -1,0 +1,3 @@
+C:/Repositories/Parallel-programming/lab1/matrix_multiplication/build/CMakeFiles/matrix_mult.dir
+C:/Repositories/Parallel-programming/lab1/matrix_multiplication/build/CMakeFiles/ALL_BUILD.dir
+C:/Repositories/Parallel-programming/lab1/matrix_multiplication/build/CMakeFiles/ZERO_CHECK.dir

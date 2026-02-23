@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Repositories\Parallel-programming\lab1\matrix_multiplication\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Repositories\Parallel-programming\lab1\matrix_multiplication\src\matrix_multiplier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Repositories\Parallel-programming\lab1\matrix_multiplication\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0E458E93-D850-3DD5-BD02-69330E0F6C91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
