@@ -1,0 +1,10 @@
+^C:\REPOSITORIES\PARALLEL-PROGRAMMING\PARALLEL-PROGRAMMING\LAB2\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Repositories/Parallel-programming/Parallel-programming/lab2 -BC:/Repositories/Parallel-programming/Parallel-programming/lab2/build --check-stamp-file C:/Repositories/Parallel-programming/Parallel-programming/lab2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

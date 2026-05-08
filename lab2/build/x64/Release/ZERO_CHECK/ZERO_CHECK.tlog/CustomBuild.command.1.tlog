@@ -1,0 +1,10 @@
+^C:\REPOSITORIES\PARALLEL-PROGRAMMING\PARALLEL-PROGRAMMING\LAB2\BUILD\CMAKEFILES\DF081BACF68DF4BD8D70E2F9C453FAA9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Repositories/Parallel-programming/Parallel-programming/lab2 -BC:/Repositories/Parallel-programming/Parallel-programming/lab2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Repositories/Parallel-programming/Parallel-programming/lab2/build/MatrixMultiplication_Lab2.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
